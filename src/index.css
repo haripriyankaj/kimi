@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 234 96% 18%;
+    --foreground: 0 0% 100%;
+    --card: 234 96% 18%;
+    --card-foreground: 0 0% 100%;
+    --popover: 234 96% 18%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 195 85% 56%;
+    --primary-foreground: 234 96% 18%;
+    --secondary: 210 10% 92%;
+    --secondary-foreground: 234 96% 18%;
+    --muted: 234 50% 25%;
+    --muted-foreground: 210 10% 72%;
+    --accent: 195 85% 56%;
+    --accent-foreground: 234 96% 18%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 100% / 0.1;
+    --ring: 195 85% 56%;
+    --radius: 0.75rem;
+    --sidebar-background: 234 96% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 195 85% 56%;
+    --sidebar-primary-foreground: 234 96% 18%;
+    --sidebar-accent: 234 50% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.1;
+    --sidebar-ring: 195 85% 56%;
+  }
+
+  .dark {
+    --background: 234 96% 18%;
+    --foreground: 0 0% 100%;
+    --card: 234 96% 18%;
+    --card-foreground: 0 0% 100%;
+    --popover: 234 96% 18%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 195 85% 56%;
+    --primary-foreground: 234 96% 18%;
+    --secondary: 234 50% 25%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 234 50% 25%;
+    --muted-foreground: 210 10% 72%;
+    --accent: 195 85% 56%;
+    --accent-foreground: 234 96% 18%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 100% / 0.1;
+    --ring: 195 85% 56%;
+    --sidebar-background: 234 96% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 195 85% 56%;
+    --sidebar-primary-foreground: 234 96% 18%;
+    --sidebar-accent: 234 50% 25%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.1;
+    --sidebar-ring: 195 85% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #03045E;
+}
+::-webkit-scrollbar-thumb {
+  background: #0096C7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4CC9F0;
+}
+
+/* JetBrains Mono for technical elements */
+.font-mono {
+  font-family: 'JetBrains Mono', 'Space Mono', 'Fira Code', monospace;
+}
+
+/* CRT scanline effect for terminal */
+.crt-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glow effect for cyan accents */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(76, 201, 240, 0.3), 0 0 40px rgba(76, 201, 240, 0.1);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(76, 201, 240, 0.5), 0 0 40px rgba(76, 201, 240, 0.2);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #4CC9F0, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button hover glow */
+.btn-glow:hover {
+  box-shadow: 0 0 30px rgba(76, 201, 240, 0.4), 0 4px 20px rgba(76, 201, 240, 0.2);
+  transform: scale(1.05);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

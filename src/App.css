@@ -1,0 +1,80 @@
+/* App-specific styles */
+
+/* Smooth scroll behavior */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+/* Range input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -4px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #4CC9F0;
+  border: 2px solid #03045E;
+  box-shadow: 0 0 10px rgba(76, 201, 240, 0.5);
+}
+
+input[type="range"]::-moz-range-track {
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #4CC9F0;
+  border: 2px solid #03045E;
+  box-shadow: 0 0 10px rgba(76, 201, 240, 0.5);
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(76, 201, 240, 0.3);
+  color: white;
+}
+
+/* Focus styling */
+:focus-visible {
+  outline: 2px solid #4CC9F0;
+  outline-offset: 2px;
+}
+
+/* Skip to content link for accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 100;
+  padding: 8px 16px;
+  background: #4CC9F0;
+  color: #03045E;
+  font-weight: 600;
+  transition: top 0.2s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
